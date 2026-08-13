@@ -1,0 +1,231 @@
+:root{
+  --ink:#1f2a24;
+  --paper:#fbf8f2;
+  --card:#ffffff;
+  --accent:#7a4a2f;      /* coklat tanah/ukir Jepara */
+  --accent-2:#2f6f5e;    /* hijau sawah */
+  --accent-3:#c8862b;    /* kuning kunyit */
+  --line:#e4dccb;
+  --muted:#6b6357;
+  --summary-bg:#eef4ef;
+  --summary-border:#2f6f5e;
+  --quiz-bg:#fbeee0;
+  --quiz-border:#c8862b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Georgia","Iowan Old Style",serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+/* ---------- Header / Nav ---------- */
+header.site{
+  background:linear-gradient(135deg,var(--accent) 0%,#5a3520 100%);
+  color:#fdf6ec;
+  padding:34px 20px 26px;
+  border-bottom:6px solid var(--accent-3);
+}
+header.site .wrap{padding:0 0}
+header.site .eyebrow{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.72rem;
+  opacity:.85;
+}
+header.site h1{
+  margin:.35em 0 .15em;
+  font-size:1.7rem;
+  line-height:1.25;
+}
+header.site p.sub{margin:0;opacity:.9;font-size:.98rem}
+
+nav.crumbs{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:.82rem;
+  background:#3d2517;
+  color:#f1e3d2;
+  padding:10px 20px;
+}
+nav.crumbs .wrap{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:0}
+nav.crumbs a{color:#f6d9ae;text-decoration:none}
+nav.crumbs a:hover{text-decoration:underline}
+nav.crumbs span.sep{opacity:.5}
+
+.section-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:22px 0 6px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+}
+.section-nav a{
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:999px;
+  background:var(--card);
+  border:1px solid var(--line);
+  color:var(--accent);
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:600;
+}
+.section-nav a.current{background:var(--accent);color:#fff;border-color:var(--accent)}
+.section-nav a:hover{border-color:var(--accent)}
+
+/* ---------- Typography ---------- */
+main{padding-top:8px}
+h2{
+  font-size:1.4rem;
+  color:var(--accent);
+  border-bottom:2px solid var(--line);
+  padding-bottom:.3em;
+  margin-top:2.2em;
+}
+h3{font-size:1.15rem;color:#3d2517;margin-top:1.6em}
+h4{font-size:1rem;color:var(--accent-2);margin-bottom:.4em}
+p{margin:.75em 0}
+ul,ol{padding-left:1.4em}
+li{margin:.35em 0}
+a{color:var(--accent-2)}
+
+figure.img-note{
+  margin:1.2em 0;
+  padding:14px 16px;
+  background:#f1ede2;
+  border:1px dashed #b9ad8f;
+  border-radius:8px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:.86rem;
+  color:var(--muted);
+}
+figure.img-note figcaption{margin-top:.3em;font-style:italic}
+figure.img-note::before{content:"🖼️ Ilustrasi/gambar sumber cetak: ";font-weight:700;color:var(--accent)}
+
+/* ---------- Summary card ---------- */
+.summary{
+  background:var(--summary-bg);
+  border-left:5px solid var(--summary-border);
+  border-radius:10px;
+  padding:18px 20px 6px;
+  margin:20px 0 34px;
+}
+.summary h2{
+  margin-top:0;
+  border-bottom:none;
+  color:var(--summary-border);
+  font-size:1.15rem;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+.summary ul{padding-left:1.2em}
+.summary li{margin:.4em 0}
+
+.chapter-summary{
+  background:linear-gradient(180deg,#fff 0%,var(--summary-bg) 100%);
+  border:1px solid var(--summary-border);
+  border-radius:14px;
+  padding:22px 24px 12px;
+  margin:22px 0 36px;
+}
+.chapter-summary h2{border-bottom:none;margin-top:0}
+
+/* ---------- Cards / tables ---------- */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:1.2em 0;
+  font-size:.92rem;
+  background:var(--card);
+}
+caption{caption-side:top;text-align:left;font-weight:700;margin-bottom:.4em;color:var(--accent)}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1ede2}
+tbody tr:nth-child(even){background:#faf7f0}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px 18px;
+  margin:1em 0;
+}
+
+/* ---------- Quiz / Assesmen ---------- */
+.quiz{
+  background:var(--quiz-bg);
+  border:1px solid var(--quiz-border);
+  border-radius:10px;
+  padding:14px 18px 8px;
+  margin:1.2em 0;
+}
+.quiz p.qtext{font-weight:700;margin-bottom:.5em}
+.quiz ol.opts{list-style:upper-alpha;padding-left:1.6em}
+.quiz ol.opts li{margin:.25em 0}
+.quiz-title{
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  font-size:.78rem;
+  color:var(--accent-3);
+  font-weight:700;
+  margin:2em 0 .6em;
+}
+.blank-line{display:inline-block;border-bottom:1px solid #999;width:70%}
+
+.essay li{margin:.9em 0}
+
+/* ---------- Footer ---------- */
+footer{
+  margin-top:60px;
+  padding:20px 0;
+  border-top:1px solid var(--line);
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:.8rem;
+  color:var(--muted);
+  text-align:center;
+}
+
+.pager{
+  display:flex;
+  justify-content:space-between;
+  margin:44px 0 10px;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  gap:12px;
+}
+.pager a{
+  flex:1;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:10px;
+  padding:12px 16px;
+  text-decoration:none;
+  color:var(--ink);
+}
+.pager a.next{text-align:right}
+.pager a small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.pager a strong{color:var(--accent)}
+
+.badge{
+  display:inline-block;
+  font-family:"Helvetica Neue",Arial,sans-serif;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  background:var(--accent-3);
+  color:#3a2a10;
+  padding:3px 10px;
+  border-radius:999px;
+  margin-bottom:.6em;
+}
+
+@media (max-width:600px){
+  header.site h1{font-size:1.35rem}
+  .wrap{padding:0 14px 60px}
+}
